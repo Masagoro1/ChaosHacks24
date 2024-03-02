@@ -10,6 +10,7 @@ public class ObjectTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        objectToTrack = GameObject.FindWithTag("Player").transform;
         speed = Random.Range(3.0f, 5.0f);
     }
 
