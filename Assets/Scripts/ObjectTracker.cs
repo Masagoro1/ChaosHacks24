@@ -10,7 +10,7 @@ public class ObjectTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = Random.value();
+        speed = Random.Range(3.0f, 5.0f);
     }
 
     // Update is called once per frame
@@ -21,6 +21,6 @@ public class ObjectTracker : MonoBehaviour
 
         // Movement code
         // Change value for step (speed)
-        gameObject.position = Vector3.MoveTowards(gameObject.position, objectToTrack.position, speed * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, speed * Time.deltaTime);
     }
 }
