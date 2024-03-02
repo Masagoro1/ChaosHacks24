@@ -6,11 +6,13 @@ public class NoteSpawn : MonoBehaviour
 {
     public GameObject projectile;
     float spawnCooldown;
+    public Transform spawnPoints[];
+    // Find parent object put children object ino array
     // Start is called before the first frame update
     void Start()
     {
         spawnCooldown = 5;
-        
+        spawnPoints = gameObject.GetComponentsInChildren<Transform>(); 
     }
 
     // Update is called once per frame
@@ -20,8 +22,8 @@ public class NoteSpawn : MonoBehaviour
             spawnCooldown -= Time.deltaTime;
         }
         else{
-            Debug.Log("Instantiate");
-            spawnCooldown = 3;
+            Instantiate(projectile, spawnPoints[Random.Range(0,5)].transform.position, Quaternion.identity);
+            spawnCooldown = Random.Range(1.0f, 3.0f); 
         }
     }
 }
