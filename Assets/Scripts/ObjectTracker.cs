@@ -11,7 +11,7 @@ public class ObjectTracker : MonoBehaviour
     void Start()
     {
         objectToTrack = GameObject.FindWithTag("Player").transform;
-        speed = Random.Range(3.0f, 5.0f);
+        speed = Random.Range(10.0f, 20.0f);
     }
 
     // Update is called once per frame
@@ -22,6 +22,6 @@ public class ObjectTracker : MonoBehaviour
 
         // Movement code
         // Change value for step (speed)
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, speed * Time.deltaTime);
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, 0.1f * speed * Time.deltaTime);
     }
 }
