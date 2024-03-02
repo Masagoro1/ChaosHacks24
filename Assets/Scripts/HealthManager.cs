@@ -37,9 +37,5 @@ public class HealthManager : MonoBehaviour
         healthBar.fillAmount = healthAmount / 100f;
     }
 
-    private void OnTriggerEnter2d(Collider2D other){
-        if(other.tag == "Projectile"){
-            TakeDamage(20);
-        }
-    }
+    
 }
