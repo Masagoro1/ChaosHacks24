@@ -17,10 +17,9 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ()
-
-        if (healthAmount = 0) {
-            Application.ForceCrash;
+        
+        if (healthAmount <= 0) {
+            //Application.ForceCrash();
         }
     }
 
@@ -39,7 +38,7 @@ public class HealthManager : MonoBehaviour
     }
 
     private void OnTriggerEnter2d(Collider2D other){
-        if(other.Tag == "Projectile"){
+        if(other.tag == "Projectile"){
             TakeDamage(20);
         }
     }
