@@ -25,6 +25,7 @@ public class ProjectileDestruction : MonoBehaviour
             if (distance<1 && distance>-1){
                 // Immediately 
                 Destroy(gameObject);
+                GameObject.FindWithTag("Health").GetComponent<HealthManager>().heal(10);
             }
         }
     }
