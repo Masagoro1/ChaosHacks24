@@ -15,7 +15,7 @@ public class ProjectileDestruction : MonoBehaviour
     {
 
         // 0 is the left button
-        while (Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0)){
             // Get distance between mousepoint and projectile
             Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 gameObjectPosition = new Vector2(Input.gameObject.x, Input.gameObject.y);
