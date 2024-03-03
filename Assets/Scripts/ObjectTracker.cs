@@ -19,6 +19,7 @@ public class ObjectTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(new Vector3(Random.Range(-1.0f, 1.0f) / (health / 100), Random.Range(-1.0f, 1.0f) / (health / 100), 0));
         timer += Time.deltaTime;
         if(timer > 30)
         {
@@ -27,12 +28,17 @@ public class ObjectTracker : MonoBehaviour
         // Track the object
         transform.LookAt(objectToTrack);
         health = GameObject.FindWithTag("Health").GetComponent<HealthManager>().healthAmount;
+        if(health <= 0)
+        {
+            health = 1;
+        }
         // Movement code
         // Change value for step (speed)
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, 0.1f * speed * Time.deltaTime);
         if(Random.Range(0,100) > (95 + 0.05f * health))
         {
-            transform.Translate(new Vector3(Random.Range(-1.0f, 1.0f) / (health/100), Random.Range(-1.0f, 1.0f) / (health / 100), 0));
+            transform.Translate(new Vector2(Random.Range(-1.0f, 1.0f) / (health/100), Random.Range(-1.0f, 1.0f) / (health / 100)));
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, 0.03f * speed);
         }
     }
 }

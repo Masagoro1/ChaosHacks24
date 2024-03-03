@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -7479797486106354589}
   - component: {fileID: 5415196866513852100}
   - component: {fileID: 2090535115582322648}
+  - component: {fileID: 3026020794292564128}
   m_Layer: 0
-  m_Name: ProjectileParent
+  m_Name: ProjectileParent 1
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +125,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
+--- !u!95 &3026020794292564128
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264908285806971353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3fa8fa59163f114db1f73234f5f6ce9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4545472926136229580
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8275810931490411850}
   - component: {fileID: 8658566275965044952}
-  - component: {fileID: 5252528632661951460}
+  - component: {fileID: 5383746655768357192}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -209,7 +231,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5252528632661951460
+--- !u!95 &5383746655768357192
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -219,7 +241,7 @@ Animator:
   m_GameObject: {fileID: 4545472926136229580}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9a4e9643057b22241b5bf4cbd352722a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0fa4c7e54b8421c4a9be1627cd3b0176, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

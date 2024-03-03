@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NoteSpawn : MonoBehaviour
 {
-    public GameObject projectile;
+    [SerializeField]
+    public GameObject[] projectile;
     [SerializeField]
     float spawnCooldown, difficultyIncrease;
     public Transform [] spawnPoints;
@@ -28,7 +29,7 @@ public class NoteSpawn : MonoBehaviour
             spawnCooldown -= Time.deltaTime;
         }
         else{
-            Instantiate(projectile, spawnPoints[Random.Range(1,7)].transform.position, Quaternion.identity);
+            Instantiate(projectile[Random.Range(0,4)], spawnPoints[Random.Range(1,7)].transform.position, Quaternion.identity);
             spawnCooldown = Random.Range(1.0f, 3.0f) - difficultyIncrease; 
         }
     }

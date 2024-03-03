@@ -26,6 +26,7 @@ public class ProjectileDestruction : MonoBehaviour
                 // Immediately 
                 Destroy(gameObject);
                 GameObject.FindWithTag("Health").GetComponent<HealthManager>().Heal(10);
+                GameObject.FindWithTag("Points").GetComponent<Points>().pointsUP();
             }
         }
     }
