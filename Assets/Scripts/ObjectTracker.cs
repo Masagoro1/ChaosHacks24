@@ -12,7 +12,7 @@ public class ObjectTracker : MonoBehaviour
     void Start()
     {
         objectToTrack = GameObject.FindWithTag("Player").transform;
-        speed = Random.Range(10.0f, 20.0f);
+        speed = Random.Range(15.0f, 25.0f);
         timer = 0;
     }
 
@@ -38,7 +38,7 @@ public class ObjectTracker : MonoBehaviour
         if(Random.Range(0,100) > (95 + 0.05f * health))
         {
             transform.Translate(new Vector2(Random.Range(-1.0f, 1.0f) / (health/100), Random.Range(-1.0f, 1.0f) / (health / 100)));
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, 0.03f * speed);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, objectToTrack.position, 0.035f * speed);
         }
     }
 }
