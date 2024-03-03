@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class HealthManager : MonoBehaviour
     {
         
         if (healthAmount <= 0) {
-            //Application.ForceCrash();
+            SceneManager.LoadSceneAsync(2);
         }
     }
 
